@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1> Mi Primer Dashboard</h1>
+    <canvas id="chart"></canvas>
+    <script>
+         // Configura y renderiza la gráfica utilizando Chart.js
+      const ctx = document.getElementById('chart').getContext('2d');
+      const chartData = <%= JSON.stringify(data) %>; // Datos obtenidos de la API
+      // Realiza el procesamiento necesario de los datos según la estructura de la API
+      const chart = new Chart(ctx, {
+        // Configuración de la gráfica
+      });
+    </script>
+</body>
+</html>
